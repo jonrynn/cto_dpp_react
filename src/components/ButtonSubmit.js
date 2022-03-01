@@ -21,8 +21,20 @@ const ButtonSubmit = (props) => {
         alert("Order was rejected: " + err.response);
         return "Order was rejected: " + err.response;
       });
+      getUsers();
   };
 
+  const getUsers = () => {
+    axios.get("http://127.0.0.1:5000/users").then(
+      (response) => {
+        console.log(response.data);
+      },
+      (error) => {
+        console.log("nothing");
+      }
+    );
+  }
+  
   return (
     <div className="narrow my-5">
       <button

@@ -11,17 +11,6 @@ function App() {
   const [petName, setPetName] = useState("");
   const [petOwner, setPetOwner] = useState("");
   const [petType, setPetType] = useState("");
-  const getUsers = () => {
-    axios.get("http://127.0.0.1:5000/users").then(
-      (response) => {
-        console.log(response.data);
-      },
-      (error) => {
-        console.log("nothing");
-      }
-    );
-    //dispatch(referenceActions.setReferences());
-  };
 
   const petIDHandler = (e) => {
     setPetID(e.target.value);
