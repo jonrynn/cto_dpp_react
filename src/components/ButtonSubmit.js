@@ -10,7 +10,7 @@ const ButtonSubmit = (props) => {
   };
   const postCart = async () => {
     await axios
-      .post("http://127.0.0.1:5000/post/" + props.petID, new_user)
+      .post("http://127.0.0.1:5000/user/" + props.petID, new_user)
       .then((res) => {
         console.log("submitted");
         //console.log("posted item id = " + res.data.items[0].itemID);
