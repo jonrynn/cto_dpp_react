@@ -22,6 +22,7 @@ const ButtonSubmit = (props) => {
         return "Order was rejected: " + err.response;
       });
       getUsers();
+
   };
 
   const getUsers = () => {

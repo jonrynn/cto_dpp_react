@@ -1,10 +1,11 @@
-import React, { Fragment, useEffect } from "react";
+import React from "react";
+
+
 
 const FormInput = (props) => {
-  const { labelText, required, onBlurHandler, id } = props;
 
-  const wasSubmitButtonClicked = props.wasSubmitButtonClicked;
 
+  
   return (
     <div className="container-fluid wide">
       <div className="row">
@@ -24,6 +25,7 @@ const FormInput = (props) => {
                   minLength="2"
                   maxLength="40"
                   onChange={props.petIDHandler}
+               
                 />
               </div>
               <div className="col-6">
@@ -50,11 +52,7 @@ const FormInput = (props) => {
               </div>
               <div className="col-12 mt-2">
                 <label htmlFor="petType">Pet Type</label>
-                {required && (
-                  <span className="text-danger mx-1" aria-hidden="true">
-                    *
-                  </span>
-                )}
+               
                 <input
                   className={`form-control form-control-lg rounded }`}
                   id="petType"
